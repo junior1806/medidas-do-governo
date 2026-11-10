@@ -89,6 +89,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .bloco h2{font-family:var(--display);font-weight:900;font-size:clamp(1.3rem,4vw,1.7rem);margin:0;color:var(--branco);text-wrap:balance;border-bottom:2px solid var(--verde);padding-bottom:6px}
 .sub{margin:0;color:var(--texto-suave);max-width:70ch}
 .nota{margin:0;font-size:.92rem;max-width:72ch}
+.artigo p{margin:0;max-width:68ch;line-height:1.65}
+.artigo .lede{font-size:1.12rem;font-weight:500;color:var(--branco)}
+.artigo h3{font-family:var(--display);font-weight:800;font-size:1.1rem;margin:10px 0 -4px;color:var(--amarelo)}
+.artigo .fecho{border-left:4px solid var(--verde);padding-left:14px;font-weight:500}
 .colunas{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;height:240px;background:var(--azul-card);border-radius:16px;padding:16px 16px 12px}
 .col{display:flex;flex-direction:column;height:100%;align-items:center;gap:6px;min-width:0}
 .area{flex:1;min-height:0;width:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px}
@@ -1146,9 +1150,20 @@ render(atual);
     <div class="kpi"><span class="kv">cerca de 0,6%</span><span class="kk">da dívida bruta de hoje é o peso estimado do custo extra de antecipar o pagamento</span></div>
   </div>
 
-  <section class="bloco">
-    <h2>A resposta curta</h2>
-    <p class="nota">Sim, o dinheiro usado para pagar o FMI veio de reservas em dólar que o Banco Central e o Tesouro compraram emitindo dívida em reais. Mas essa dívida com o FMI venceria em 2006 e 2007 de qualquer forma, e teria de ser paga com dólares comprados do mesmo jeito. O que a antecipação mudou foi pagar de alguns meses a dois anos antes, trocando juros de cerca de 4% por Selic de 15% a 19%. Pela nossa simulação, que inclui os dois pagamentos de 2005, isso custou cerca de R$ 11,2 bi até 2007, algo como R$ 67 bi em valores de hoje: cerca de 0,6% da dívida bruta. Não explica o endividamento atual.</p>
+  <section class="bloco artigo">
+    <h2>O pagamento antecipado ao FMI, explicado</h2>
+    <p class="lede">Em 2005, o Brasil quitou antes do prazo toda a sua dívida com o Fundo Monetário Internacional: US$ 5,1 bi em julho e US$ 15,5 bi em dezembro. O pagamento virou símbolo político, mas o efeito sobre as contas públicas foi bem menor do que se costuma dizer.</p>
+    <h3>De onde vinha a dívida</h3>
+    <p>O dinheiro do FMI entrou em três pacotes de socorro, fechados nas crises de 1998, 2001 e 2002, quando a fuga de dólares ameaçava o real. O maior deles, de 2002, foi assinado no governo Fernando Henrique e mantido por Lula, que o renovou em 2003. Em troca, o país se comprometia com metas fiscais acompanhadas pelo Fundo. Os juros eram baixos, de cerca de 4% ao ano, e as últimas parcelas venceriam em 2006 e 2007.</p>
+    <h3>Por que pagar antes</h3>
+    <p>O governo argumentou que as reservas em dólar tinham crescido o bastante para dispensar o socorro, que o país economizaria US$ 900 milhões em juros e que deixaria de seguir as condições do Fundo pela primeira vez em oito anos. Havia também um sinal político: mostrar ao mercado e ao eleitor que o Brasil não dependia mais do FMI.</p>
+    <h3>De onde saiu o dinheiro</h3>
+    <p>Para pagar em dólar, é preciso ter dólar. O Banco Central e o Tesouro compraram a moeda no mercado e, para isso, o Banco Central emite reais que depois recolhe vendendo títulos. Na prática, a compra de dólares é financiada com dívida interna, que paga a Selic. Por isso é correto dizer que o Brasil trocou dívida externa barata por dívida interna cara.</p>
+    <h3>O que a antecipação mudou de fato</h3>
+    <p>Essa troca aconteceria de qualquer forma: a dívida com o FMI venceria até 2007 e também teria de ser paga com dólares comprados do mesmo jeito. O que o pagamento antecipado mudou foi o prazo. O país passou a pagar Selic, entre 15% e 19% ao ano, de alguns meses a dois anos antes do necessário, no lugar dos cerca de 4% do Fundo. A economia de US$ 900 milhões anunciada na época olhava só para os juros do FMI, sem contar o custo da dívida interna usada para comprar os dólares.</p>
+    <h3>Quanto custou</h3>
+    <p>Pela simulação desta página, que considera os dois pagamentos de 2005, a antecipação custou cerca de R$ 11,2 bi até 2007. Corrigido pela Selic até hoje, isso equivale a algo como R$ 67 bi, cerca de 0,6% da dívida bruta atual. Parte desse custo veio da valorização do real em 2006 e 2007, que ninguém podia prever em 2005: com o dólar mais barato, pagar depois teria saído mais em conta.</p>
+    <p class="fecho">O pagamento ao FMI teve um custo real, mas pequeno diante do tamanho da dívida. Pesaram muito mais a compra de reservas nos anos seguintes, que também foi feita com dívida interna, os déficits primários a partir de 2014 e os juros. Os blocos a seguir mostram a linha do tempo, as duas leituras políticas do pagamento e a conta em detalhe.</p>
   </section>
 
   <section class="bloco">
